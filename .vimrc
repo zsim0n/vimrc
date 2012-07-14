@@ -1,7 +1,11 @@
 " Vundle setup
 set nocompatible               " be iMproved 
 filetype off                   " required! 
-set rtp+=~/.vim/bundle/vundle/ 
+set rtp+=~/.vim/bundle/vundle/
+if has("win32") 
+    set shell=powershell
+    set shellcmdflag=-command
+endif
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -9,7 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-"
+    "
 Bundle 'wombat256.vim'
 Bundle 'The-NERD-tree'
 Bundle 'The-NERD-Commenter'
